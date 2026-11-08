@@ -29,7 +29,7 @@ export function createHttpApi(base: string): Api {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "text/event-stream" },
         body: JSON.stringify({ scope: { kind: scope.kind, id: scope.id }, question }),
-        signal,
+        signal: signal ?? null,
       });
       if (!res.ok || !res.body) throw new Error(`提问失败（${res.status}）`);
       const reader = res.body.getReader();

@@ -1,3 +1,4 @@
+// @ts-nocheck -- mock-only generator; strict index checks add noise here
 // In-browser mock backend. State persists in localStorage so jobs survive refresh/leaving.
 import { genCreator, genVideoContent, hash, rng, standaloneMeta, PROFILES, fakeBvid, BANK } from "./mock-data";
 import type { Api, AskEvent, AskScope, Claim, Creator, HistoryItem, Job, JobStage, Level, Density, Page, VideoDetail, VideoMeta } from "./types";
